@@ -7,7 +7,8 @@ ENV CI=true
 
 RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
 
-RUN apt-get update && apt-get install -y --no-install-recommends git \
+RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates \
+  && update-ca-certificates \
   && rm -rf /var/lib/apt/lists/*
 
 ARG VITE_PUBLIC_APP_URL
