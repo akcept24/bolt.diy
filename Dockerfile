@@ -100,4 +100,5 @@ ENV VITE_LOG_LEVEL=${VITE_LOG_LEVEL} \
 # Example: docker run -e OPENAI_API_KEY=your_key_here ...
 
 RUN mkdir -p /app/run
+HEALTHCHECK NONE
 CMD ["pnpm", "run", "dev", "--host"]
