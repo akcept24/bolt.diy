@@ -1,4 +1,4 @@
-# ---- build stage ----
+# ---- build stage ----#
 FROM node:22-bookworm-slim AS build
 WORKDIR /app
 
@@ -101,3 +101,4 @@ ENV VITE_LOG_LEVEL=${VITE_LOG_LEVEL} \
 RUN mkdir -p /app/run
 
 CMD ["pnpm", "run", "dev", "--host"]
+
