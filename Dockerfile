@@ -77,8 +77,7 @@ RUN chmod +x /app/bindings.sh
 EXPOSE 5173
 
 # Healthcheck for deployment platforms
-HEALTHCHECK --interval=10s --timeout=3s --start-period=5s --retries=5 \
-  CMD curl -fsS http://localhost:5173/ || exit 1
+
 
 # Start using dockerstart script with Wrangler
 CMD ["pnpm", "run", "dockerstart"]
